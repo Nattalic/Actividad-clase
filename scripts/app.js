@@ -1,30 +1,15 @@
-//1. Comentarios
+const formulario = document.getElementById('Formulario')
 
-//
-//
-
-//2. Variables
-
-//Variable que puede cambiar su valor
-
-//Variable Let
-let variableLet ="hola"
-
-console.log(variableLet)
-
-variableLet = "Mundo :3"
-
-console.log(variableLet)
-
-variableLet = "Esto es una variable"
-
-console.log(variableLet)
-
-//Variable Const (cuando se repiten muchas cosas en el codigo)
-const constanteConts = "Eso es una constante"
-
-console.log(constanteConts)
+formulario.addEventListener('submit', function(event){
+    event.preventDefault();
 
 
-//Variable var (asignar valores/variables)
-var Esmayor = true
+    const nombre = document.getElementById('nombre').value
+    const edad = document.getElementById("edad").value 
+    const fechaNacimiento = document.getElementById("fechaNacimiento").value
+
+    const textoFinal = `Mi nombre es ${nombre}, mi edad es ${edad} y nací el ${fechaNacimiento}`
+
+    document.getElementById('resultado').textContent = textoFinal
+
+})
